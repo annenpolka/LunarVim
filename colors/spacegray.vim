@@ -1,2 +1,4 @@
 " Author: Christian Chiarulli <chrisatmachine@gmail.com>
-lua require("spacegray")
+if !exists('g:vscode')
+  lua require("spacegray")
+endif

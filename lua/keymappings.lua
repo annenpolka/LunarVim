@@ -15,6 +15,7 @@ local mappings = {
     { "kj", "<ESC>" },
     { "jj", "<ESC>" },
 
+
     -- Move current line / block with Alt-j/k ala vscode.
     { "<A-j>", "<Esc>:m .+1<CR>==gi" },
     { "<A-k>", "<Esc>:m .-2<CR>==gi" },
@@ -31,6 +32,10 @@ local mappings = {
     { "<C-j>", "<C-w>j", { silent = true } },
     { "<C-k>", "<C-w>k", { silent = true } },
     { "<C-l>", "<C-w>l", { silent = true } },
+
+    -- 10J
+    { "J", "10j" },
+    { "K", "10k" },
 
     -- Resize with arrows
     { "<C-Up>", ":resize -2<CR>", { silent = true } },
@@ -63,14 +68,16 @@ local mappings = {
     -- Better indenting
     { "<", "<gv" },
     { ">", ">gv" },
-
+    -- 10J
+    { "J", "10j" },
+    { "K", "10k" },
     -- { "p", '"0p', { silent = true } },
     -- { "P", '"0P', { silent = true } },
   },
   x = { -- Visual mode
     -- Move selected line / block of text in visual mode
-    { "K", ":move '<-2<CR>gv-gv" },
     { "J", ":move '>+1<CR>gv-gv" },
+    { "K", ":move '<-2<CR>gv-gv" },
 
     -- Move current line / block with Alt-j/k ala vscode.
     { "<A-j>", ":m '>+1<CR>gv-gv" },
